@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* фон */
+body{
+	background: url(../img/backgraund.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+/* меню */
+/* logo{
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+} */
+
+header{
+  width: 100%;
+  position: fixed;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: .4s ease-in-out;
+  }
+  .topmenu {
+    backface-visibility: hidden;
+    margin: 10px;
+    background: rgba(93, 211, 89, 0.8);
+    border-radius: 5px;
+    box-shadow: 6px 6px 5px rgb(134, 12, 12);
+    text-align: center;
+    font-size: 1em;
+  }
+  .topmenu > li {
+    display: inline-block;
+    position: relative;
+  }
+  .topmenu > li > a {
+    font-family: 'Exo 2', sans-serif;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 6px 6px 5px rgb(206, 16, 16);
+    text-transform: uppercase;
+  }
+  .down:after {
+    content: "\f142";
+    margin-left: 8px;
+    font-family: FontAwesome;
+  }
+  
+  .topmenu li a:hover { 
+    color: #1b0370; text-shadow: 0px 0px 0px rgb(134, 12, 12);
+  }
+  
+  .submenu {
+    background: rgba(192, 142, 36, 0.8);
+    border-radius: 5px;
+    box-shadow: 6px 6px 5px rgb(206, 16, 16);
+    text-shadow: 6px 6px 5px rgb(206, 16, 16);
+    border: 1px solid rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 230px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+  }
+  .topmenu > li:hover .submenu{
+    visibility: visible;
+    /* background: rgba(79, 216, 61, 0.8); */
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+  }
+  .submenu li a {
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: left;
+    line-height: 36px;
+    padding: 0 25px;
+    font-family: 'Kurale', serif;
+  }
